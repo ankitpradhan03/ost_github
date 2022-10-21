@@ -1,0 +1,18 @@
+#credit and debit
+acc_no=int(input("enter the  account number"))
+acc_name=(input("enter the  account name"))
+acc_bal=float(input("enter the  account balance"))
+op=input("enter the operation to be performed")
+if op=="c" or op=="C":
+    cred_amt=float(input("enter the  account to be credited"))
+    bal=acc_bal+cred_amt
+    print("the value of balance",bal)
+elif op=="d" or op=="D":
+    debt_amt=float(input("enter the  account to be debited"))
+    if (debt_amt<acc_bal):
+        bal=acc_bal-debt_amt
+        print("the value of balance",bal)
+    else:
+        print("the amount is invalid")
+else:
+    print("the opertaion is invalid")
